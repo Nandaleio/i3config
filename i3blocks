@@ -1,0 +1,33 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+separator_block_width=15
+
+[backlight]
+command=/home/nandaleio/.config/i3blocks/backlight/backlight
+label=☀ 
+interval=20
+
+[volume-pipewire]
+command=/home/nandaleio/.config/i3blocks/volume-pipewire/volume-pipewire
+interval=once
+signal=1
+LONG_FORMAT="🔊 ${VOL}%"
+
+[rofi-calendar]
+command=/home/nandaleio/.config/i3blocks/rofi-calendar/rofi-calendar
+interval=3600
+BAR_POSITION=top
+ROFI_CONFIG_FILE=/home/nandaleio/.config/rofi/config.rasi
+
+[time]
+command=date '+%H:%M:%S'
+interval=5
+
